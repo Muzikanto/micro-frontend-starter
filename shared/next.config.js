@@ -53,7 +53,7 @@ const nextConfig = {
           exposes: {
             './shared-component': './src/components/SharedComponent',
           },
-          shared,
+          // shared,
         })
     );
 
