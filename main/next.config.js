@@ -1,6 +1,5 @@
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
 const nextTranslate = require('next-translate');
-const withPlugins = require('next-compose-plugins');
 
 const publicRuntimeConfig = {
   isProd: process.env.NODE_ENV === 'production',
@@ -17,11 +16,22 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  // crossOrigin: 'anonymous',
+  crossOrigin: undefined, // 'anonymous',
   publicRuntimeConfig,
+  assetPrefix: process.env.ASSET_PREFIX,
+  images: {
+    loaderFile: undefined,
+  },
+  amp: {
+    canonicalBase: undefined,
+  },
+  experimental: {
+    outputFileTracingRoot: undefined,
+  },
 
   webpack(config, options) {
     const { isServer } = options;
+
     config.plugins.push(
         new NextFederationPlugin({
           name: 'main',
@@ -37,8 +47,12 @@ const nextConfig = {
   },
 }
 
-const plugins = [
-  [nextTranslate, {}],
-];
+const plugins = [nextTranslate];
 
-module.exports = withPlugins(plugins, nextConfig);
+module.exports = (_phase, { defaultConfig }) => {
+  delete defaultConfig.webpackDevMiddleware;
+  delete defaultConfig.configOrigin;
+  delete defaultConfig.target;
+
+  return plugins.reduce((acc, plugin) => plugin(acc), { ...defaultConfig, ...nextConfig });
+}

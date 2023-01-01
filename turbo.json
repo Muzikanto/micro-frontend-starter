@@ -16,6 +16,7 @@
     "lint": {
       "outputs": []
     },
+    "pretty": {},
     "deploy": {
       "dependsOn": ["build", "test", "lint"],
       "outputs": []
