@@ -1,0 +1,49 @@
+{
+  "name": "micro-frontend-demo",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "turbo": "^1.2.5",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-prettier": "3.4.1",
+    "prettier": "1.18.2"
+  },
+  "scripts": {
+    "install": "npm i -S --legacy-peer-deps",
+    "start": "npx turbo run dev",
+    "build": "npx turbo run build",
+    "pretty": "echo \"no script\""
+  },
+  "workspaces": [
+    "main",
+    "shared"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "create-next-app": "^13.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pretty",
+      "pre-push": "npm test",
+      "...": "..."
+    }
+  }
+}
