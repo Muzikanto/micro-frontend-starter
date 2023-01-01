@@ -1,13 +1,14 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { AppPage } from '../utils/next';
+import { internalFunc } from 'internal';
 
 // @ts-ignore
 const SharedComponent = dynamic(() => import('shared/shared-component'), {
   ssr: true,
 });
 
-const Home: AppPage = function() {
+const Home: AppPage = function () {
   return (
     <>
       <Head>
@@ -18,9 +19,11 @@ const Home: AppPage = function() {
       </Head>
       <main>
         <div>
-          <h1>Main content</h1>
+          <p>Main content</p>
 
           <SharedComponent />
+
+          <p>{internalFunc()}</p>
         </div>
       </main>
     </>

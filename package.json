@@ -15,7 +15,8 @@
   },
   "workspaces": [
     "main",
-    "shared"
+    "shared",
+    "internal"
   ],
   "browserslist": {
     "production": [
