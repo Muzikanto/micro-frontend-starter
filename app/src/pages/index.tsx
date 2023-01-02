@@ -1,7 +1,8 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { AppPage } from '../utils/next';
-import { internalFunc } from 'internal';
+import { internalFunc } from 'ui-utils';
+import { Example } from 'ui-kit';
 
 // @ts-ignore
 const SharedComponent = dynamic(() => import('shared/shared-component'), {
@@ -22,6 +23,8 @@ const Home: AppPage = function () {
           <p>Main content</p>
 
           <SharedComponent />
+
+          <Example/>
 
           <p>{internalFunc()}</p>
         </div>
