@@ -19,7 +19,7 @@ TBD
 - [Turborepo](https://turborepo.org/)
 - React
 - Typescript
-- Next
+- Next (with next-seo, next-translate)
 - Webpack v5 (w/ Module Federation)
 
 ## Related Blog Posts
