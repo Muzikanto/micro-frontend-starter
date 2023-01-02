@@ -20,7 +20,6 @@ TBD
 - React
 - Typescript
 - Next
-- Turbo
 - Webpack v5 (w/ Module Federation)
 
 ## Related Blog Posts
