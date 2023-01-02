@@ -4,11 +4,12 @@ A sample repo for demoing a micro frontend architecture setup.
 
 ## Getting started
 
-1. Run: `npm start`
+1. Run: `npm run dev`
 2. Navigate to `http://localhost:3000/`
 
 Main Host App: `http://localhost:3000/`
 Shared Remote: `http://localhost:3001/`
+Ui-kit: `http://localhost:6006/`
 
 ## Architecture
 
@@ -19,8 +20,7 @@ TBD
 - [Turborepo](https://turborepo.org/)
 - React
 - Typescript
-- Next
-- Turbo
+- Next (with next-seo, next-translate)
 - Webpack v5 (w/ Module Federation)
 
 ## Related Blog Posts
