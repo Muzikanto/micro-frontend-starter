@@ -28,6 +28,7 @@
 
 # ide
 .idea
+.vscode
 
 # next.js
 .next

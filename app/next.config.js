@@ -26,6 +26,7 @@ const nextConfig = {
     canonicalBase: undefined,
   },
   experimental: {
+    appDir: false,
     outputFileTracingRoot: undefined,
   },
 
