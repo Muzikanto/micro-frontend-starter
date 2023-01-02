@@ -11,4 +11,7 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
+
+  // Only report warnings and errors in the browser console.
+  logLevel: 'warn',
 };
