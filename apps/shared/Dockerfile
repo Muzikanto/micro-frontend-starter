@@ -21,6 +21,7 @@ WORKDIR /app
 COPY .gitignore .gitignore
 COPY --from=builder /app/out/json/ .
 COPY --from=builder /app/out/package-lock.json ./package-lock.json
+COPY /apps/shared/.env .
 RUN npm install
 
 # Build the project
