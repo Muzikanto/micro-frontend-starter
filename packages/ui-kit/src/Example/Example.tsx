@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import clsx from 'clsx';
 
 export type ExampleProps = React.HtmlHTMLAttributes<HTMLParagraphElement>;
 
@@ -13,7 +14,15 @@ const Root = styled('p')({
 });
 
 const Example: React.FC = (props: ExampleProps) => {
-  return <Root {...props}>example component</Root>;
+  const { className, ...other } = props;
+
+  const rootCN = clsx(classes.root, className);
+
+  return (
+    <Root {...other} className={rootCN}>
+      example component
+    </Root>
+  );
 };
 
 export default Example;
