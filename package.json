@@ -22,6 +22,7 @@
     "packages/ui-utils",
     "packages/ui-kit"
   ],
+  "packageManager": "npm@8.15.0",
   "browserslist": {
     "production": [
       ">0.2%",
