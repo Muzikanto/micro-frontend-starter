@@ -1,5 +1,5 @@
 import Example from './Example';
-import { ComponentMeta } from '@storybook/react';
+import {ComponentMeta, ComponentStory} from '@storybook/react';
 
 const DefaultExample: ComponentMeta<typeof Example> = {
   title: 'Example',
@@ -8,7 +8,9 @@ const DefaultExample: ComponentMeta<typeof Example> = {
   argTypes: {},
 };
 
-export const Basic = Example.bind({});
+const Template: ComponentStory<typeof Example> = (props) => <Example {...props}/>
+
+export const Basic = Template.bind({});
 Basic.args = {};
 
 export default DefaultExample;

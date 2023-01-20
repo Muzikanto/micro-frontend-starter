@@ -30,6 +30,7 @@ const App: AppRoot = ({ Component, pageProps }) => {
 App.getInitialProps = async (appContext) => {
   const { Component, ctx } = appContext;
 
+  // eslint-disable-next-line
   let pageProps: any = {};
 
   if (Component.getInitialProps) {

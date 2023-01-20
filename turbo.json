@@ -6,10 +6,11 @@
       "dependsOn": ["^start"]
     },
     "dev": {
-      "dependsOn": ["^dev"]
+      "dependsOn": ["^build"],
+      "cache": false
     },
     "storybook": {
-      "dependsOn": ["^storybook"]
+      "dependsOn": []
     },
     "build": {
       "dependsOn": ["^build"],
@@ -31,7 +32,10 @@
     "deploy": {
       "dependsOn": ["build", "test", "lint"],
       "outputs": []
-    }
+    },
+    "clean": {},
+    "dev:check": {},
+    "lint:fix": {}
   },
   "globalDependencies": [
     ".npmrc",

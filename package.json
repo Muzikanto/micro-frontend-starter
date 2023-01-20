@@ -14,13 +14,14 @@
     "start": "npx turbo run start",
     "lint": "npx turbo run lint",
     "pretty": "npx turbo run pretty",
-    "storybook": "npx turbo run storybook"
+    "storybook": "npx turbo run storybook",
+    "dev:check": "npx turbo run dev:check",
+    "lint:fix": "npx turbo run lint:fix",
+    "clean": "npx turbo run clean"
   },
   "workspaces": [
-    "apps/web",
-    "apps/shared",
-    "packages/ui-utils",
-    "packages/ui-kit"
+    "apps/*",
+    "packages/*"
   ],
   "packageManager": "npm@8.15.0",
   "browserslist": {

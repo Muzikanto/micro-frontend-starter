@@ -8,7 +8,9 @@
     "start": "next start -p 3001",
     "lint": "next lint",
     "pretty": "pretty-quick --staged",
-    "clean": "rm -rf ./.next"
+    "clean": "rm -rf ./.next",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "dev:check": "tsc --noEmit"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -29,6 +31,7 @@
     "webpack": "^5.75.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
-    "@types/react-dom": "18.0.10"
+    "@types/react-dom": "18.0.10",
+    "tsconfig": "*"
   }
 }
